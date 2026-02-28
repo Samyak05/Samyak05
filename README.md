@@ -30,29 +30,34 @@ I believe in structured learning, clean documentation, and disciplined system de
 
 ---
 
-## 🛠 Technical Skills
 
-**Languages**
-- Python
-- C
-- SQL
+## 🛠 Technical Stack
 
-**Backend & Databases**
-- FastAPI
-- PostgreSQL
-- Row Level Security (RLS)
-- REST APIs
+### 💻 Languages
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
+![C](https://img.shields.io/badge/C-00599C?style=flat&logo=c&logoColor=white)
+![SQL](https://img.shields.io/badge/SQL-4479A1?style=flat&logo=postgresql&logoColor=white)
 
-**Blockchain**
-- Solidity
-- Ethereum
-- IPFS
-- NFT Marketplace Architecture
+---
 
-**Tools**
-- Git
-- Linux
-- VS Code
+### 🗄 Backend & Databases
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat&logo=fastapi&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=flat&logo=postgresql&logoColor=white)
+![RLS](https://img.shields.io/badge/Row_Level_Security-Access_Control-blue)
+
+---
+
+### 🔗 Blockchain
+![Solidity](https://img.shields.io/badge/Solidity-363636?style=flat&logo=solidity&logoColor=white)
+![Ethereum](https://img.shields.io/badge/Ethereum-3C3C3D?style=flat&logo=ethereum&logoColor=white)
+![IPFS](https://img.shields.io/badge/IPFS-65C2CB?style=flat&logo=ipfs&logoColor=white)
+
+---
+
+### ⚙ Tools
+![Git](https://img.shields.io/badge/Git-F05032?style=flat&logo=git&logoColor=white)
+![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat&logo=linux&logoColor=black)
+![VS Code](https://img.shields.io/badge/VS%20Code-007ACC?style=flat&logo=visual-studio-code&logoColor=white)
 
 ---
 
