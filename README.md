@@ -1,32 +1,74 @@
-<h1 align="center">Hi 👋, I'm Samyak!</h1>
-<h3 align="center">A am a Computer Science Major from NIT Karnataka</h3>
+# 👋 Hi, I'm Samyak Gedam
 
-<p align="left"> <img src="https://komarev.com/ghpvc/?username=samyak05&label=Profile%20views&color=0e75b6&style=flat" alt="samyak05" /> </p>
+🎓 M.Tech – Computer Science  
+🔐 Focused on Cryptography, Security & Backend Systems  
+📍 India  
 
-<p align="left"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=samyak05" alt="samyak05" /></a> </p>
+---
 
-- 🔭 I’m currently working on **upgrading my skills in tech**
+## 🚀 About Me
 
-- 🌱 I’m currently learning **Networking, Linux, DSA**
+I am currently pursuing my M.Tech in Computer Science with strong interest in:
 
-- 💬 Ask me about **PC Games**
+- Applied Cryptography  
+- Information Security  
+- Database Security (RLS, Auditing, Access Control)
+- Privacy-Preserving Computation  
+- Backend System Design  
 
-- 📫 How to reach me **samyakgedam03@gmail.com**
+I believe in structured learning, clean documentation, and disciplined system design.
 
-- ⚡ Fun fact **I like cats**
+---
 
-<h3 align="left">Connect with me:</h3>
-<p align="left">
-<a href="https://twitter.com/_samyak05" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="_samyak05" height="30" width="40" /></a>
-<a href="https://linkedin.com/in/samyak-gedam" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="samyak-gedam" height="30" width="40" /></a>
-<a href="https://www.leetcode.com/_samyak05" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/leet-code.svg" alt="_samyak05" height="30" width="40" /></a>
-</p>
+## 📘 Academic Portfolio
 
-<h3 align="left">Languages and Tools:</h3>
-<p align="left"> <a href="https://www.gnu.org/software/bash/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/gnu_bash/gnu_bash-icon.svg" alt="bash" width="40" height="40"/> </a> <a href="https://www.w3schools.com/cpp/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/cplusplus/cplusplus-original.svg" alt="cplusplus" width="40" height="40"/> </a> <a href="https://git-scm.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="git" width="40" height="40"/> </a> <a href="https://www.linux.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg" alt="linux" width="40" height="40"/> </a> <a href="https://www.mysql.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg" alt="mysql" width="40" height="40"/> </a> <a href="https://www.postgresql.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original-wordmark.svg" alt="postgresql" width="40" height="40"/> </a> <a href="https://www.python.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="python" width="40" height="40"/> </a> </p>
+🟢 Main Academic Hub  
+🔗 [MTech-Academic-Portfolio](https://github.com/Samyak05/MTech-Academic-Portfolio)
 
-<p><img align="left" src="https://github-readme-stats.vercel.app/api/top-langs?username=samyak05&show_icons=true&locale=en&layout=compact" alt="samyak05" /></p>
+📚 Semester 1 Coursework  
+🔗 [M.Tech-Academics-Sem-1](https://github.com/Samyak05/M.Tech-Academics-Sem-1)
 
-<p>&nbsp;<img align="center" src="https://github-readme-stats.vercel.app/api?username=samyak05&show_icons=true&locale=en" alt="samyak05" /></p>
+---
 
-<p><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=samyak05&" alt="samyak05" /></p>
+## 🛠 Technical Skills
+
+**Languages**
+- Python
+- C
+- SQL
+
+**Backend & Databases**
+- FastAPI
+- PostgreSQL
+- Row Level Security (RLS)
+- REST APIs
+
+**Blockchain**
+- Solidity
+- Ethereum
+- IPFS
+- NFT Marketplace Architecture
+
+**Tools**
+- Git
+- Linux
+- VS Code
+
+---
+
+## 🔬 Current Focus
+
+- Secure Backend Architectures  
+- Context-Aware Access Control Systems  
+- Privacy Preserving Machine Learning  
+
+---
+
+## 📫 Connect With Me
+
+- [LinkedIn](www.linkedin.com/in/samyak-gedam)
+- [Email](samyakgedam03@gmail.com)
+
+---
+
+> “Security is not a feature. It is a mindset.”
