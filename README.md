@@ -20,13 +20,13 @@ I believe in structured learning, clean documentation, and disciplined system de
 
 ---
 
-## 📘 Academic Portfolio
+## 🎓 Academic Portfolio  
 
 🟢 Main Academic Hub  
-🔗 [MTech-Academic-Portfolio](https://github.com/Samyak05/MTech-Academic-Portfolio)
+🔗 [MTech-Academic-Portfolio](https://github.com/Samyak05/MTech-Academic-Portfolio)   
 
-📚 Semester 1 Coursework  
-🔗 [M.Tech-Academics-Sem-1](https://github.com/Samyak05/M.Tech-Academics-Sem-1)
+🔵 Projects Hub   
+🔗 [Major Projects](https://github.com/Samyak05/MTech-Major-Projects.git)
 
 ---
 
