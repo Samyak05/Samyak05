@@ -22,11 +22,11 @@ I believe in structured learning, clean documentation, and disciplined system de
 
 ## 🎓 Academic Portfolio  
 
+🔵 B.Tech Academic Work (2021–2025)   
+🔗 [B.Tech-Academics-Repository](https://github.com/Samyak05/BTech-Academics-2021-2025.git)   
+
 🟢 M.Tech Academic Work (2025-2027)  
 🔗 [MTech-Academic-Portfolio](https://github.com/Samyak05/MTech-Academic-Portfolio)    
-
-🔵 B.Tech Academic Work (2021–2025)  
-🔗 [B.Tech-Academics-Repository](https://github.com/Samyak05/BTech-Academics-2021-2025.git)
 
 📍 Projects Hub   
 🔗 [Major Projects](https://github.com/Samyak05/MTech-Major-Projects.git)
