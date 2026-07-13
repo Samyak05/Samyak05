@@ -2,6 +2,6 @@
 
 # Hi 👋 I'm Samyak
 
-<img src="./assets/terminal.svg" alt="Terminal"/>
+<img src="./assets/template.svg" alt="Terminal"/>
 
 </div>

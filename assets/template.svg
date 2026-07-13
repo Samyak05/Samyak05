@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="1200"
+    height="700"
+    viewBox="0 0 1200 700">
+
+    <!-- Background -->
+    <rect
+        width="1200"
+        height="700"
+        fill="#0d1117"/>
+
+    <!-- Terminal Window -->
+    <rect
+        x="80"
+        y="50"
+        width="1040"
+        height="620"
+        rx="12"
+        fill="#161b22"
+        stroke="#30363d"
+        stroke-width="2"/>
+
+    <!-- Window Buttons -->
+    <circle cx="110" cy="78" r="8" fill="#ff5f56"/>
+    <circle cx="135" cy="78" r="8" fill="#ffbd2e"/>
+    <circle cx="160" cy="78" r="8" fill="#27c93f"/>
+
+    <!-- Title -->
+    <text
+        x="600"
+        y="84"
+        text-anchor="middle"
+        font-family="monospace"
+        font-size="22"
+        fill="#c9d1d9">
+
+        samyak@opensuse
+
+    </text>
+
+    <!-- Header Separator -->
+    <line
+        x1="80"
+        y1="105"
+        x2="1120"
+        y2="105"
+        stroke="#30363d"
+        stroke-width="2"/>
+
+    <!-- Vertical Divider -->
+    <line
+        x1="420"
+        y1="120"
+        x2="420"
+        y2="650"
+        stroke="#30363d"
+        stroke-width="2"/>
+
+    <!-- ASCII Placeholder -->
+    <text
+        x="250"
+        y="360"
+        text-anchor="middle"
+        font-family="monospace"
+        font-size="22"
+        fill="#7d8590">
+
+    ASCII
+
+    </text>
+
+
+    <!-- Username -->
+    <text
+        x="470"
+        y="150"
+        font-family="monospace"
+        font-size="24"
+        fill="#c9d1d9">
+
+    samyak@opensuse
+
+    </text>
+
+    <line
+    x1="470"
+    y1="165"
+    x2="720"
+    y2="165"
+    stroke="#c9d1d9"
+    stroke-width="2"/>
+
+
+    <text x="470" y="205" font-family="monospace" font-size="20" fill="#f0a500">OS:</text>
+
+    <text x="470" y="245" font-family="monospace" font-size="20" fill="#f0a500">Kernel:</text>
+
+    <text x="470" y="285" font-family="monospace" font-size="20" fill="#f0a500">Shell:</text>
+
+    <text x="470" y="325" font-family="monospace" font-size="20" fill="#f0a500">Editor:</text>
+
+    <text x="470" y="385" font-family="monospace" font-size="20" fill="#f0a500">Languages.Programming:</text>
+
+    <text x="470" y="445" font-family="monospace" font-size="20" fill="#f0a500">Languages.Tools:</text>
+
+    <text x="470" y="525" font-family="monospace" font-size="20" fill="#f0a500">Projects:</text>
+
+    <text x="470" y="605" font-family="monospace" font-size="20" fill="#f0a500">GitHub Stats:</text>
+
+</svg>
