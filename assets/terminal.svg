@@ -64,6 +64,17 @@
 
     </g>
 
+    def line(x1, y1, x2, y2, color="#c9d1d9", width=2):
+    return f'''
+    <line
+        x1="{x1}"
+        y1="{y1}"
+        x2="{x2}"
+        y2="{y2}"
+        stroke="{color}"
+        stroke-width="{width}"/>
+    '''
+
     <!-- ========================================================= -->
     <!-- Left Panel -->
     <!-- ========================================================= -->
@@ -79,15 +90,7 @@
             stroke="#30363d"
             stroke-width="2"/>
 
-        <!--
-            Generated ASCII portrait will be inserted here.
-
-            The Python generator will replace this placeholder
-            with multiple <text> elements representing the
-            generated ASCII art.
-        -->
-
-        <!-- {{ascii.portrait}} -->
+        {{ascii}}
 
     </g>
 
@@ -104,38 +107,32 @@
         <!-- Identity -->
         <!-- ===================================================== -->
 
-        <g id="identity">
-
-            <!-- Username -->
+        <g id="identity-section">
 
             <text
-                id="username"
-                x="470"
-                y="150"
-                font-size="24"
-                fill="#c9d1d9">
-
-                {{identity.username}}
-
-            </text>
-
-            <!--
-                Underline length will be generated dynamically
-                according to username length.
-            -->
-
-            <line
-                id="username-underline"
-                x1="470"
-                y1="165"
-                x2="720"
-                y2="165"
-                stroke="#c9d1d9"
-                stroke-width="2"/>
-
-            <!-- Future tagline -->
-
-            <!-- {{identity.tagline}} -->
+        x="470"
+        y="150"
+        text-anchor="start"
+        font-size="24"
+        fill="#c9d1d9">samyak@opensuse</text>
+<text
+        x="470"
+        y="170"
+        text-anchor="start"
+        font-size="20"
+        fill="#c9d1d9">---------------</text>
+<text
+        x="470"
+        y="205"
+        text-anchor="start"
+        font-size="20"
+        fill="#c9d1d9">M.Tech Computer Science Student</text>
+<text
+        x="470"
+        y="235"
+        text-anchor="start"
+        font-size="20"
+        fill="#7d8590">Linux • Networking • DevOps • Security</text>
 
         </g>
 
@@ -143,40 +140,32 @@
         <!-- System Information -->
         <!-- ===================================================== -->
 
-        <g id="system-info">
-
-            <!-- Label -->
+        <g id="system-section">
 
             <text
-                x="470"
-                y="205"
-                fill="#d19a66">
-
-                OS:
-
-            </text>
-
-            <!-- Dot Leader -->
-
-            <text
-                x="520"
-                y="205"
-                fill="#7d8590">
-
-                ....................
-
-            </text>
-
-            <!-- Value -->
-
-            <text
-                x="760"
-                y="205"
-                fill="#c9d1d9">
-
-                {{system.os}}
-
-            </text>
+        x="470"
+        y="290"
+        text-anchor="start"
+        font-size="20"
+        fill="#c9d1d9">OS:....................... openSUSE Tumbleweed</text>
+<text
+        x="470"
+        y="320"
+        text-anchor="start"
+        font-size="20"
+        fill="#c9d1d9">Kernel:................... Linux 6.16</text>
+<text
+        x="470"
+        y="350"
+        text-anchor="start"
+        font-size="20"
+        fill="#c9d1d9">Shell:.................... fish</text>
+<text
+        x="470"
+        y="380"
+        text-anchor="start"
+        font-size="20"
+        fill="#c9d1d9">Editor:................... VS Code</text>
 
         </g>
 
@@ -184,11 +173,9 @@
         <!-- Languages -->
         <!-- ===================================================== -->
 
-        <g id="languages">
+        <g id="languages-section">
 
-            <!-- Future rows -->
-
-            <!-- {{languages.*}} -->
+            {{languages}}
 
         </g>
 
@@ -196,9 +183,9 @@
         <!-- Tools -->
         <!-- ===================================================== -->
 
-        <g id="tools">
+        <g id="tools-section">
 
-            <!-- {{tools.*}} -->
+            {{tools}}
 
         </g>
 
@@ -206,9 +193,9 @@
         <!-- Projects -->
         <!-- ===================================================== -->
 
-        <g id="projects">
+        <g id="projects-section">
 
-            <!-- {{projects.*}} -->
+            {{projects}}
 
         </g>
 
@@ -216,9 +203,9 @@
         <!-- Contact -->
         <!-- ===================================================== -->
 
-        <g id="contact">
+        <g id="contact-section">
 
-            <!-- {{contact.*}} -->
+            {{contact}}
 
         </g>
 
@@ -226,9 +213,9 @@
         <!-- GitHub Statistics -->
         <!-- ===================================================== -->
 
-        <g id="github">
+        <g id="github-section">
 
-            <!-- {{github.*}} -->
+            {{github}}
 
         </g>
 
