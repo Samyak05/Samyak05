@@ -115,12 +115,15 @@
         text-anchor="start"
         font-size="24"
         fill="#c9d1d9">samyak@opensuse</text>
-<text
-        x="470"
-        y="170"
-        text-anchor="start"
-        font-size="20"
-        fill="#c9d1d9">---------------</text>
+
+    <line
+        x1="470"
+        y1="165"
+        x2="650"
+        y2="165"
+        stroke="#c9d1d9"
+        stroke-width="2"/>
+    
 <text
         x="470"
         y="205"

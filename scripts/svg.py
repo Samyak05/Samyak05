@@ -15,3 +15,14 @@ def text(x, y, value, *, fill="#c9d1d9", size=20, anchor="start"):
         text-anchor="{anchor}"
         font-size="{size}"
         fill="{fill}">{escape(str(value))}</text>'''
+
+def line(x1, y1, x2, y2, color="#c9d1d9", width=2):
+    return f'''
+    <line
+        x1="{x1}"
+        y1="{y1}"
+        x2="{x2}"
+        y2="{y2}"
+        stroke="{color}"
+        stroke-width="{width}"/>
+    '''

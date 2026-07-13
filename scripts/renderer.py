@@ -1,5 +1,5 @@
 from config.profile import PROFILE
-from scripts.svg import text
+from scripts.svg import text, line
 
 
 def build_identity():
@@ -23,11 +23,11 @@ def build_identity():
 
     # Underline
     parts.append(
-        text(
+        line(
             470,
-            170,
-            "-" * len(username),
-            fill="#c9d1d9"
+            165,
+            650,
+            165
         )
     )
 
