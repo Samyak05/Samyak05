@@ -1,5 +1,5 @@
 from config.profile import PROFILE
-from scripts.svg import text, line
+from scripts.svg import text, line, rich_text
 
 
 def build_identity():
@@ -62,17 +62,75 @@ def build_system():
     for key, value in system:
         dots = "." * max(1, 25 - len(key))
 
-        line = f"{key}:{dots} {value}"
-
         parts.append(
-            text(
+            rich_text(
                 470,
                 y,
-                line,
-                fill="#c9d1d9"
+                [
+                    (f"{key}:", "#d19a66"),
+                    (dots, "#7d8590"),
+                    (f" {value}", "#a5d6ff"),
+                ]
             )
         )
 
         y += 30
 
     return "\n".join(parts)
+
+def build_languages():
+    languages = PROFILE["languages"]
+
+    parts = []
+
+    y = 450
+
+    for category, value in languages:
+
+        dots = "." * max(1, 16 - len(category))
+
+        parts.append(
+            rich_text(
+                470,
+                y,
+                [
+                    ("Languages.", "#d19a66"),
+                    (category, "#d19a66"),
+                    (":" + dots, "#7d8590"),
+                    (" " + value, "#a5d6ff"),
+                ],
+            )
+        )
+
+        y += 30
+
+    return "\n".join(parts)
+
+def build_tools():
+    tools = PROFILE["tools"]
+
+    parts = []
+
+    y = 540
+
+    for category, value in tools:
+
+        dots = "." * max(1, 18 - len(category))
+
+        parts.append(
+            rich_text(
+                470,
+                y,
+                [
+                    ("Tools.", "#d19a66"),
+                    (category, "#d19a66"),
+                    (":" + dots, "#7d8590"),
+                    (" " + value, "#a5d6ff"),
+                ],
+            )
+        )
+
+        y += 30
+
+    return "\n".join(parts)
+

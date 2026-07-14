@@ -64,16 +64,6 @@
 
     </g>
 
-    def line(x1, y1, x2, y2, color="#c9d1d9", width=2):
-    return f'''
-    <line
-        x1="{x1}"
-        y1="{y1}"
-        x2="{x2}"
-        y2="{y2}"
-        stroke="{color}"
-        stroke-width="{width}"/>
-    '''
 
     <!-- ========================================================= -->
     <!-- Left Panel -->
@@ -83,9 +73,9 @@
 
         <!-- Panel Divider -->
         <line
-            x1="420"
+            x1="380"
             y1="120"
-            x2="420"
+            x2="380"
             y2="650"
             stroke="#30363d"
             stroke-width="2"/>
@@ -101,7 +91,7 @@
     <g
         id="right-panel"
         font-family="monospace"
-        font-size="20">
+        font-size="17">
 
         <!-- ===================================================== -->
         <!-- Identity -->
@@ -145,30 +135,10 @@
 
         <g id="system-section">
 
-            <text
-        x="470"
-        y="290"
-        text-anchor="start"
-        font-size="20"
-        fill="#c9d1d9">OS:....................... openSUSE Tumbleweed</text>
-<text
-        x="470"
-        y="320"
-        text-anchor="start"
-        font-size="20"
-        fill="#c9d1d9">Kernel:................... Linux 6.16</text>
-<text
-        x="470"
-        y="350"
-        text-anchor="start"
-        font-size="20"
-        fill="#c9d1d9">Shell:.................... fish</text>
-<text
-        x="470"
-        y="380"
-        text-anchor="start"
-        font-size="20"
-        fill="#c9d1d9">Editor:................... VS Code</text>
+            <text x="470" y="290" font-size="20"><tspan fill="#d19a66">OS:</tspan><tspan fill="#7d8590">.......................</tspan><tspan fill="#a5d6ff"> openSUSE Tumbleweed</tspan></text>
+<text x="470" y="320" font-size="20"><tspan fill="#d19a66">Kernel:</tspan><tspan fill="#7d8590">...................</tspan><tspan fill="#a5d6ff"> Linux 6.16</tspan></text>
+<text x="470" y="350" font-size="20"><tspan fill="#d19a66">Shell:</tspan><tspan fill="#7d8590">....................</tspan><tspan fill="#a5d6ff"> fish</tspan></text>
+<text x="470" y="380" font-size="20"><tspan fill="#d19a66">Editor:</tspan><tspan fill="#7d8590">...................</tspan><tspan fill="#a5d6ff"> VS Code</tspan></text>
 
         </g>
 
@@ -178,7 +148,9 @@
 
         <g id="languages-section">
 
-            {{languages}}
+            <text x="470" y="450" font-size="20"><tspan fill="#d19a66">Languages.</tspan><tspan fill="#d19a66">Programming</tspan><tspan fill="#7d8590">:.....</tspan><tspan fill="#a5d6ff"> Java, Python, C, C++</tspan></text>
+<text x="470" y="480" font-size="20"><tspan fill="#d19a66">Languages.</tspan><tspan fill="#d19a66">Scripting</tspan><tspan fill="#7d8590">:.......</tspan><tspan fill="#a5d6ff"> Bash</tspan></text>
+<text x="470" y="510" font-size="20"><tspan fill="#d19a66">Languages.</tspan><tspan fill="#d19a66">Markup</tspan><tspan fill="#7d8590">:..........</tspan><tspan fill="#a5d6ff"> Markdown, HTML, YAML</tspan></text>
 
         </g>
 
@@ -188,7 +160,9 @@
 
         <g id="tools-section">
 
-            {{tools}}
+            <text x="470" y="540" font-size="20"><tspan fill="#d19a66">Tools.</tspan><tspan fill="#d19a66">Development</tspan><tspan fill="#7d8590">:.......</tspan><tspan fill="#a5d6ff"> Git, GitHub, IntelliJ IDEA</tspan></text>
+<text x="470" y="570" font-size="20"><tspan fill="#d19a66">Tools.</tspan><tspan fill="#d19a66">Networking</tspan><tspan fill="#7d8590">:........</tspan><tspan fill="#a5d6ff"> Wireshark, tcpdump, OpenSSL</tspan></text>
+<text x="470" y="600" font-size="20"><tspan fill="#d19a66">Tools.</tspan><tspan fill="#d19a66">Linux</tspan><tspan fill="#7d8590">:.............</tspan><tspan fill="#a5d6ff"> Network Namespaces, iproute2</tspan></text>
 
         </g>
 

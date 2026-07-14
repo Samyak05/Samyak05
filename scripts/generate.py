@@ -1,6 +1,11 @@
 from pathlib import Path
 
-from scripts.renderer import build_identity, build_system
+from scripts.renderer import (
+    build_identity,
+    build_system,
+    build_languages,
+    build_tools,
+)
 
 TEMPLATE = Path("assets/template.svg")
 OUTPUT = Path("assets/terminal.svg")
@@ -17,6 +22,16 @@ def main():
     svg = svg.replace(
         "{{system}}",
         build_system()
+    )
+
+    svg = svg.replace(
+        "{{languages}}",
+        build_languages()
+    )
+
+    svg = svg.replace(
+        "{{tools}}",
+        build_tools()
     )
 
     OUTPUT.write_text(svg, encoding="utf-8")

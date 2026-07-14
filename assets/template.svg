@@ -64,16 +64,6 @@
 
     </g>
 
-    def line(x1, y1, x2, y2, color="#c9d1d9", width=2):
-    return f'''
-    <line
-        x1="{x1}"
-        y1="{y1}"
-        x2="{x2}"
-        y2="{y2}"
-        stroke="{color}"
-        stroke-width="{width}"/>
-    '''
 
     <!-- ========================================================= -->
     <!-- Left Panel -->
@@ -83,9 +73,9 @@
 
         <!-- Panel Divider -->
         <line
-            x1="420"
+            x1="380"
             y1="120"
-            x2="420"
+            x2="380"
             y2="650"
             stroke="#30363d"
             stroke-width="2"/>
@@ -101,7 +91,7 @@
     <g
         id="right-panel"
         font-family="monospace"
-        font-size="20">
+        font-size="17">
 
         <!-- ===================================================== -->
         <!-- Identity -->

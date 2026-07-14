@@ -26,3 +26,20 @@ def line(x1, y1, x2, y2, color="#c9d1d9", width=2):
         stroke="{color}"
         stroke-width="{width}"/>
     '''
+
+def rich_text(x, y, parts, size=20):
+    """
+    parts = [
+        ("text", "#color"),
+        ("another", "#color"),
+    ]
+    """
+
+    svg = f'<text x="{x}" y="{y}" font-size="{size}">'
+
+    for value, color in parts:
+        svg += f'<tspan fill="{color}">{value}</tspan>'
+
+    svg += "</text>"
+
+    return svg

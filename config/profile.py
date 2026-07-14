@@ -12,8 +12,17 @@ PROFILE = {
         ("Editor", "VS Code"),
     ],
 
-    "languages": [],
-    "tools": [],
+    "languages": [
+        ("Programming", "Java, Python, C, C++"),
+        ("Scripting", "Bash"),
+        ("Markup", "Markdown, HTML, YAML"),
+    ],
+    
+    "tools": [
+        ("Development", "Git, GitHub, IntelliJ IDEA"),
+        ("Networking", "Wireshark, tcpdump, OpenSSL"),
+        ("Linux", "Network Namespaces, iproute2"),
+    ],
     "projects": [],
     "contact": [],
     "github": [],
