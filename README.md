@@ -1,7 +1,3 @@
-<div align="center">
-
-# Hi 👋 I'm Samyak
-
-<img src="./assets/terminal.svg" alt="Terminal"/>
-
-</div>
+<p align="center">
+  <img src="./dark_mode.svg" alt="Samyak's Terminal Profile Card" width="100%">
+</p>
