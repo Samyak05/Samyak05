@@ -176,7 +176,7 @@ def generate_svg(username, followers, repos, stars, commits, tux_base64):
 
           <!-- Bottom Full-Width Sections -->
           <div class="section-title">- Languages -----------------------------------------------------------------------------</div>
-          <div><span class="label">Languages.Programming</span><span class="dots-leader">................</span> <span class="val">Python, Java, C++, C</span></div>
+          <div><span class="label">Languages.Programming</span><span class="dots-leader">................</span> <span class="val">Java, C++, C, Python</span></div>
           <div><span class="label">Languages.Scripting</span><span class="dots-leader">..................</span> <span class="val">Bash</span></div>
           <div><span class="label">Languages.Markup</span><span class="dots-leader">.....................</span> <span class="val">LaTeX, Markdown</span></div>
 
