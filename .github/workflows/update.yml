@@ -25,10 +25,10 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
           GH_USERNAME: 'Samyak05'
-        run: python today.py
+        run: python generate_readme.py
 
       - name: Commit and Push Changes
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "Auto-update profile SVG stats"
-          file_pattern: "dark_mode.svg"
+          file_pattern: "github-profile.svg"

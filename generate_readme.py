@@ -2,7 +2,7 @@ import os
 import requests
 import base64
 
-with open("tux.svg", "rb") as f:
+with open("tux-logo.svg", "rb") as f:
     tux_base64 = base64.b64encode(f.read()).decode()
 
 QUERY = """
@@ -207,9 +207,9 @@ def generate_svg(username, followers, repos, stars, commits, tux_base64):
   </foreignObject>
 </svg>
 '''
-    with open("dark_mode.svg", "w") as f:
+    with open("github-profile.svg", "w") as f:
         f.write(svg_content)
-    print("Successfully generated dark_mode.svg!")
+    print("Successfully generated github-profile.svg!")
 
 if __name__ == "__main__":
     token = os.getenv("GH_TOKEN")

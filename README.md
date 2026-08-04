@@ -1,3 +1,3 @@
 <p align="center">
-  <img src="./dark_mode.svg" alt="Samyak's Terminal Profile Card" width="100%">
+  <img src="./github-profile.svg" alt="Samyak's Terminal Profile Card" width="100%">
 </p>
