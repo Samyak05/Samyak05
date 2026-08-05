@@ -2,6 +2,31 @@ import os
 import requests
 import base64
 
+from datetime import datetime
+from dateutil.relativedelta import relativedelta
+
+from datetime import datetime
+from dateutil.relativedelta import relativedelta # Optional, or use datetime calculation
+
+def calculate_uptime(birth_date_str):
+    # Pass your birthdate in YYYY-MM-DD format
+    birth_date = datetime.strptime(birth_date_str, "%Y-%m-%d")
+    now = datetime.now()
+    
+    years = now.year - birth_date.year
+    months = now.month - birth_date.month
+    days = now.day - birth_date.day
+    
+    if days < 0:
+        months -= 1
+        # Approximate days in previous month
+        days += 30
+    if months < 0:
+        years -= 1
+        months += 12
+        
+    return f"{years} years, {months} months, {days} days"
+
 with open("tux-logo.svg", "rb") as f:
     tux_base64 = base64.b64encode(f.read()).decode()
 
@@ -49,7 +74,7 @@ def fetch_stats(username, token):
     )
     return followers, repos, stars, commits
 
-def generate_svg(username, followers, repos, stars, commits, tux_base64):
+def generate_svg(username, followers, repos, stars, commits, tux_base64, uptime_str):
     svg_content = f'''<svg fill="none" width="850" height="780" xmlns="http://www.w3.org/2000/svg">
   <foreignObject width="100%" height="100%">
     <div xmlns="http://www.w3.org/1999/xhtml">
@@ -178,7 +203,8 @@ def generate_svg(username, followers, repos, stars, commits, tux_base64):
               <div class="subtitle-tags">Linux • Networking • Security</div>
 
               <div><span class="label">OS</span><span class="dots-leader">..................</span> <span class="val">openSUSE Tumbleweed</span></div>
-              <div><span class="label">Kernel</span><span class="dots-leader">..............</span> <span class="val">Linux 7.1</span></div>
+              <div><span class="label">Uptime</span><span class="dots-leader">..............</span> <span class="val">{uptime_str}</span></div>
+              <div><span class="label">Kernel</span><span class="dots-leader">..............</span> <span class="val">Linux 7.1.4</span></div>
               <div><span class="label">Shell</span><span class="dots-leader">...............</span> <span class="val">bash 5.3.15</span></div>
               <div><span class="label">Editor</span><span class="dots-leader">..............</span> <span class="val">Vim, VSCode, IntelliJ IDEA</span></div>
             </div>
@@ -225,8 +251,11 @@ if __name__ == "__main__":
     token = os.getenv("GH_TOKEN")
     username = os.getenv("GH_USERNAME", "Samyak05")
     
+    # Calculate your age / uptime (Replace with your actual birthdate YYYY-MM-DD)
+    uptime_str = calculate_uptime("2003-03-11")
+    
     if not token:
         print("Error: GH_TOKEN environment variable is missing.")
     else:
         followers, repos, stars, commits = fetch_stats(username, token)
-        generate_svg(username, followers, repos, stars, commits, tux_base64)
+        generate_svg(username, followers, repos, stars, commits, tux_base64, uptime_str)

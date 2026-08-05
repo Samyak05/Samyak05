@@ -126,7 +126,8 @@
               <div class="subtitle-tags">Linux • Networking • Security</div>
 
               <div><span class="label">OS</span><span class="dots-leader">..................</span> <span class="val">openSUSE Tumbleweed</span></div>
-              <div><span class="label">Kernel</span><span class="dots-leader">..............</span> <span class="val">Linux 7.1</span></div>
+              <div><span class="label">Uptime</span><span class="dots-leader">..............</span> <span class="val">23 years, 4 months, 24 days</span></div>
+              <div><span class="label">Kernel</span><span class="dots-leader">..............</span> <span class="val">Linux 7.1.4</span></div>
               <div><span class="label">Shell</span><span class="dots-leader">...............</span> <span class="val">bash 5.3.15</span></div>
               <div><span class="label">Editor</span><span class="dots-leader">..............</span> <span class="val">Vim, VSCode, IntelliJ IDEA</span></div>
             </div>
