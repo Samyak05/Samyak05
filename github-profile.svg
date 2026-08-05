@@ -3,19 +3,19 @@
     <div xmlns="http://www.w3.org/1999/xhtml">
       <style>
         .window {
-          background-color: #161b22;
+          background-color: #0d1117;
           border: 1px solid #30363d;
           border-radius: 12px;
           padding: 0;
-          font-family: 'Fira Code', 'JetBrains Mono', 'Courier New', monospace;
-          color: #c9d1d9;
+          font-family: 'Fira Code', 'JetBrains Mono', 'Cascadia Code', monospace;
+          color: #e6edf3;
           font-size: 13px;
           line-height: 1.45;
-          box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+          box-shadow: 0 12px 32px rgba(0,0,0,0.6);
           overflow: hidden;
         }
         .titlebar {
-          background-color: #0d1117;
+          background-color: #161b22;
           padding: 10px 16px;
           display: flex;
           align-items: center;
@@ -39,6 +39,7 @@
           color: #8b949e;
           font-size: 13px;
           margin-right: 52px;
+          font-weight: 500;
         }
         .body {
           padding: 24px;
@@ -59,14 +60,14 @@
           padding-left: 20px;
         }
         .user-title {
-          color: #f0f6fc;
-          font-size: 17px;
+          color: #ffffff;
+          font-size: 18px;
           font-weight: bold;
           text-decoration: underline;
           text-underline-offset: 4px;
         }
         .subtitle-main {
-          color: #c9d1d9;
+          color: #e6edf3;
           font-size: 13.5px;
           margin-top: 6px;
         }
@@ -76,18 +77,28 @@
           margin-bottom: 14px;
         }
         .dots-leader {
-          color: #484f58;
+          color: #383e47;
         }
+        /* Vibrant Orange for Labels */
         .label {
-          color: #d29922;
+          color: #ff9e3b;
+          font-weight: 500;
         }
+        /* Bright Electric Blue/Cyan for Values */
         .val {
-          color: #79c0ff;
+          color: #61afef;
         }
+        /* Highlight Green for Important Values/Stats */
+        .val-highlight {
+          color: #98c379;
+          font-weight: bold;
+        }
+        /* Muted Grey/Blue for Section Header Dividers */
         .section-title {
-          color: #8b949e;
+          color: #abb2bf;
           margin-top: 14px;
           margin-bottom: 4px;
+          font-weight: 500;
         }
       </style>
 
@@ -114,11 +125,10 @@
               <div class="subtitle-main">M.Tech Computer Science Student</div>
               <div class="subtitle-tags">Linux • Networking • Security</div>
 
-
-              <div><span class="label">OS</span><span class="dots-leader">............................</span> <span class="val">openSUSE Tumbleweed</span></div>
-              <div><span class="label">Kernel</span><span class="dots-leader">........................</span> <span class="val">Linux 7.1</span></div>
-              <div><span class="label">Shell</span><span class="dots-leader">.........................</span> <span class="val">bash 5.3.15</span></div>
-              <div><span class="label">Editor</span><span class="dots-leader">........................</span> <span class="val">Vim, VS Code, IntelliJ IDEA</span></div>
+              <div><span class="label">OS</span><span class="dots-leader">..................</span> <span class="val">openSUSE Tumbleweed</span></div>
+              <div><span class="label">Kernel</span><span class="dots-leader">..............</span> <span class="val">Linux 7.1</span></div>
+              <div><span class="label">Shell</span><span class="dots-leader">...............</span> <span class="val">bash 5.3.15</span></div>
+              <div><span class="label">Editor</span><span class="dots-leader">..............</span> <span class="val">Vim, VSCode, IntelliJ IDEA</span></div>
             </div>
           </div>
 
@@ -145,10 +155,10 @@
           <div><span class="label">Contact.GitHub</span><span class="dots-leader">.......................</span> <span class="val">github.com/Samyak05</span></div>
 
           <div class="section-title">- GitHub Stats --------------------------------------------------------------------------</div>
-          <div><span class="label">GitHub.Repositories</span><span class="dots-leader">..................</span> <span class="val">18</span></div>
-          <div><span class="label">GitHub.Stars</span><span class="dots-leader">.........................</span> <span class="val">4</span></div>
-          <div><span class="label">GitHub.Followers</span><span class="dots-leader">.....................</span> <span class="val">5</span></div>
-          <div><span class="label">GitHub.Commits</span><span class="dots-leader">.......................</span> <span class="val">15045</span></div>
+          <div><span class="label">GitHub.Repositories</span><span class="dots-leader">..................</span> <span class="val-highlight">18</span></div>
+          <div><span class="label">GitHub.Stars</span><span class="dots-leader">.........................</span> <span class="val-highlight">4</span></div>
+          <div><span class="label">GitHub.Followers</span><span class="dots-leader">.....................</span> <span class="val-highlight">5</span></div>
+          <div><span class="label">GitHub.Commits</span><span class="dots-leader">.......................</span> <span class="val-highlight">15045</span></div>
         </div>
       </div>
     </div>
