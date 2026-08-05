@@ -5,8 +5,7 @@ import base64
 from datetime import datetime
 
 def calculate_uptime(birth_date_str):
-    # Pass your birthdate in YYYY-MM-DD format
-    birth_date = datetime.strptime(birth_date_str, "%Y-%m-%d")
+    birth_date = datetime.strptime(birth_date_str, "%Y-%m-%d") # YYYY-MM-DD format
     now = datetime.now()
     
     years = now.year - birth_date.year
@@ -15,7 +14,6 @@ def calculate_uptime(birth_date_str):
     
     if days < 0:
         months -= 1
-        # Approximate days in previous month
         days += 30
     if months < 0:
         years -= 1
@@ -252,8 +250,7 @@ if __name__ == "__main__":
     token = os.getenv("GH_TOKEN")
     username = os.getenv("GH_USERNAME", "Samyak05")
     
-    # Calculate your age / uptime (Replace with your actual birthdate YYYY-MM-DD)
-    uptime_str = calculate_uptime("2003-03-11")
+    uptime_str = calculate_uptime("2003-03-11") # Calculate age / uptime
     
     if not token:
         print("Error: GH_TOKEN environment variable is missing.")
