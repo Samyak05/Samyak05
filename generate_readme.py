@@ -3,10 +3,6 @@ import requests
 import base64
 
 from datetime import datetime
-from dateutil.relativedelta import relativedelta
-
-from datetime import datetime
-from dateutil.relativedelta import relativedelta # Optional, or use datetime calculation
 
 def calculate_uptime(birth_date_str):
     # Pass your birthdate in YYYY-MM-DD format
