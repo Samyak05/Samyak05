@@ -75,7 +75,7 @@ def fetch_stats(username, token):
     return followers, repos, stars, commits
 
 def generate_svg(username, followers, repos, stars, commits, tux_base64, uptime_str):
-    svg_content = f'''<svg fill="none" width="850" height="780" xmlns="http://www.w3.org/2000/svg">
+    svg_content = f'''<svg fill="none" width="850" height="790" xmlns="http://www.w3.org/2000/svg">
   <foreignObject width="100%" height="100%">
     <div xmlns="http://www.w3.org/1999/xhtml">
       <style>
@@ -156,26 +156,28 @@ def generate_svg(username, followers, repos, stars, commits, tux_base64, uptime_
         .dots-leader {{
           color: #383e47;
         }}
-        /* Vibrant Orange for Labels */
         .label {{
           color: #ff9e3b;
           font-weight: 500;
         }}
-        /* Bright Electric Blue/Cyan for Values */
         .val {{
           color: #61afef;
         }}
-        /* Highlight Green for Important Values/Stats */
         .val-highlight {{
           color: #98c379;
           font-weight: bold;
         }}
-        /* Muted Grey/Blue for Section Header Dividers */
         .section-title {{
           color: #abb2bf;
           margin-top: 14px;
           margin-bottom: 4px;
           font-weight: 500;
+        }}
+        /* 2x2 Grid Layout for GitHub Stats */
+        .stats-grid {{
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 4px 24px;
         }}
       </style>
 
@@ -202,11 +204,11 @@ def generate_svg(username, followers, repos, stars, commits, tux_base64, uptime_
               <div class="subtitle-main">M.Tech Computer Science Student</div>
               <div class="subtitle-tags">Linux • Networking • Security</div>
 
-              <div><span class="label">OS</span><span class="dots-leader">..................</span> <span class="val">openSUSE Tumbleweed</span></div>
-              <div><span class="label">Uptime</span><span class="dots-leader">..............</span> <span class="val">{uptime_str}</span></div>
-              <div><span class="label">Kernel</span><span class="dots-leader">..............</span> <span class="val">Linux 7.1.4</span></div>
-              <div><span class="label">Shell</span><span class="dots-leader">...............</span> <span class="val">bash 5.3.15</span></div>
-              <div><span class="label">Editor</span><span class="dots-leader">..............</span> <span class="val">Vim, VSCode, IntelliJ IDEA</span></div>
+              <div><span class="label">OS</span><span class="dots-leader">............................</span> <span class="val">openSUSE Tumbleweed</span></div>
+              <div><span class="label">Uptime</span><span class="dots-leader">........................</span> <span class="val">{uptime_str}</span></div>
+              <div><span class="label">Kernel</span><span class="dots-leader">........................</span> <span class="val">Linux 7.1</span></div>
+              <div><span class="label">Shell</span><span class="dots-leader">.........................</span> <span class="val">bash 5.3.15</span></div>
+              <div><span class="label">Editor</span><span class="dots-leader">........................</span> <span class="val">Vim, VS Code, IntelliJ IDEA</span></div>
             </div>
           </div>
 
@@ -233,10 +235,12 @@ def generate_svg(username, followers, repos, stars, commits, tux_base64, uptime_
           <div><span class="label">Contact.GitHub</span><span class="dots-leader">.......................</span> <span class="val">github.com/Samyak05</span></div>
 
           <div class="section-title">- GitHub Stats --------------------------------------------------------------------------</div>
-          <div><span class="label">GitHub.Repositories</span><span class="dots-leader">..................</span> <span class="val-highlight">{repos}</span></div>
-          <div><span class="label">GitHub.Stars</span><span class="dots-leader">.........................</span> <span class="val-highlight">{stars}</span></div>
-          <div><span class="label">GitHub.Followers</span><span class="dots-leader">.....................</span> <span class="val-highlight">{followers}</span></div>
-          <div><span class="label">GitHub.Commits</span><span class="dots-leader">.......................</span> <span class="val-highlight">{commits}</span></div>
+          <div class="stats-grid">
+            <div><span class="label">GitHub.Repositories</span><span class="dots-leader">..........</span> <span class="val-highlight">{repos}</span></div>
+            <div><span class="label">GitHub.Stars</span><span class="dots-leader">.................</span> <span class="val-highlight">{stars}</span></div>
+            <div><span class="label">GitHub.Commits</span><span class="dots-leader">...............</span> <span class="val-highlight">{commits}</span></div>
+            <div><span class="label">GitHub.Followers</span><span class="dots-leader">.............</span> <span class="val-highlight">{followers}</span></div>
+          </div>
         </div>
       </div>
     </div>
@@ -245,7 +249,7 @@ def generate_svg(username, followers, repos, stars, commits, tux_base64, uptime_
 '''
     with open("github-profile.svg", "w") as f:
         f.write(svg_content)
-    print("Successfully generated github-profile.svg with vibrant colors!")
+    print("Successfully generated github-profile.svg")
 
 if __name__ == "__main__":
     token = os.getenv("GH_TOKEN")
