@@ -200,11 +200,12 @@ def generate_svg(username, followers, repos, stars, commits, tux_base64, uptime_
               <div class="subtitle-main">M.Tech Computer Science Student</div>
               <div class="subtitle-tags">Linux • Networking • Security</div>
 
-              <div><span class="label">OS</span><span class="dots-leader">............................</span> <span class="val">openSUSE Tumbleweed</span></div>
-              <div><span class="label">Uptime</span><span class="dots-leader">........................</span> <span class="val">{uptime_str}</span></div>
-              <div><span class="label">Kernel</span><span class="dots-leader">........................</span> <span class="val">Linux 7.1</span></div>
-              <div><span class="label">Shell</span><span class="dots-leader">.........................</span> <span class="val">bash 5.3.15</span></div>
-              <div><span class="label">Editor</span><span class="dots-leader">........................</span> <span class="val">Vim, VS Code, IntelliJ IDEA</span></div>
+              <div><span class="label">OS: </span><span class="dots-leader">...............................</span> <span class="val">openSUSE Tumbleweed</span></div>
+              <div><span class="label">Uptime: </span><span class="dots-leader">...................</span> <span class="val">{uptime_str}</span></div>
+              <div><span class="label">Host: </span><span class="dots-leader">...................................</span> <span class="val">NIT Karnataka</span></div>
+              <div><span class="label">Kernel: </span><span class="dots-leader">...................................</span> <span class="val">Linux 7.1.4</span></div>
+              <div><span class="label">Shell: </span><span class="dots-leader">....................................</span> <span class="val">bash 5.3.15</span></div>
+              <div><span class="label">IDE: </span><span class="dots-leader">...................</span> <span class="val">IDEA 2026.2.0, VS Code 1.129.1</span></div>
             </div>
           </div>
 

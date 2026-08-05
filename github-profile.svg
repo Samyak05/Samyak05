@@ -127,11 +127,12 @@
               <div class="subtitle-main">M.Tech Computer Science Student</div>
               <div class="subtitle-tags">Linux • Networking • Security</div>
 
-              <div><span class="label">OS</span><span class="dots-leader">............................</span> <span class="val">openSUSE Tumbleweed</span></div>
-              <div><span class="label">Uptime</span><span class="dots-leader">........................</span> <span class="val">23 years, 4 months, 24 days</span></div>
-              <div><span class="label">Kernel</span><span class="dots-leader">........................</span> <span class="val">Linux 7.1</span></div>
-              <div><span class="label">Shell</span><span class="dots-leader">.........................</span> <span class="val">bash 5.3.15</span></div>
-              <div><span class="label">Editor</span><span class="dots-leader">........................</span> <span class="val">Vim, VS Code, IntelliJ IDEA</span></div>
+              <div><span class="label">OS: </span><span class="dots-leader">...............................</span> <span class="val">openSUSE Tumbleweed</span></div>
+              <div><span class="label">Uptime: </span><span class="dots-leader">...................</span> <span class="val">23 years, 4 months, 24 days</span></div>
+              <div><span class="label">Host: </span><span class="dots-leader">...................................</span> <span class="val">NIT Karnataka</span></div>
+              <div><span class="label">Kernel: </span><span class="dots-leader">...................................</span> <span class="val">Linux 7.1.4</span></div>
+              <div><span class="label">Shell: </span><span class="dots-leader">....................................</span> <span class="val">bash 5.3.15</span></div>
+              <div><span class="label">IDE: </span><span class="dots-leader">...................</span> <span class="val">IDEA 2026.2.0, VS Code 1.129.1</span></div>
             </div>
           </div>
 
@@ -161,7 +162,7 @@
           <div class="stats-grid">
             <div><span class="label">GitHub.Repositories</span><span class="dots-leader">..........</span> <span class="val-highlight">18</span></div>
             <div><span class="label">GitHub.Stars</span><span class="dots-leader">.................</span> <span class="val-highlight">4</span></div>
-            <div><span class="label">GitHub.Commits</span><span class="dots-leader">...............</span> <span class="val-highlight">15051</span></div>
+            <div><span class="label">GitHub.Commits</span><span class="dots-leader">...............</span> <span class="val-highlight">15053</span></div>
             <div><span class="label">GitHub.Followers</span><span class="dots-leader">.............</span> <span class="val-highlight">5</span></div>
           </div>
         </div>
