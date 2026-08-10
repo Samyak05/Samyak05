@@ -128,7 +128,7 @@
               <div class="subtitle-tags">Linux • Networking • Security</div>
 
               <div><span class="label">OS: </span><span class="dots-leader">...............................</span> <span class="val">openSUSE Tumbleweed</span></div>
-              <div><span class="label">Uptime: </span><span class="dots-leader">...................</span> <span class="val">23 years, 4 months, 28 days</span></div>
+              <div><span class="label">Uptime: </span><span class="dots-leader">...................</span> <span class="val">23 years, 4 months, 29 days</span></div>
               <div><span class="label">Host: </span><span class="dots-leader">...................................</span> <span class="val">NIT Karnataka</span></div>
               <div><span class="label">Kernel: </span><span class="dots-leader">...................................</span> <span class="val">Linux 7.1.4</span></div>
               <div><span class="label">Shell: </span><span class="dots-leader">....................................</span> <span class="val">bash 5.3.15</span></div>
@@ -162,7 +162,7 @@
           <div class="stats-grid">
             <div><span class="label">GitHub.Repositories</span><span class="dots-leader">..........</span> <span class="val-highlight">18</span></div>
             <div><span class="label">GitHub.Stars</span><span class="dots-leader">.................</span> <span class="val-highlight">4</span></div>
-            <div><span class="label">GitHub.Commits</span><span class="dots-leader">...............</span> <span class="val-highlight">15063</span></div>
+            <div><span class="label">GitHub.Commits</span><span class="dots-leader">...............</span> <span class="val-highlight">15065</span></div>
             <div><span class="label">GitHub.Followers</span><span class="dots-leader">.............</span> <span class="val-highlight">5</span></div>
           </div>
         </div>
