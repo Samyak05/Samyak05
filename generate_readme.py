@@ -21,7 +21,7 @@ def calculate_uptime(birth_date_str):
         
     return f"{years} years, {months} months, {days} days"
 
-with open("tux-logo.svg", "rb") as f:
+with open("tux-logo2.svg", "rb") as f:
     tux_base64 = base64.b64encode(f.read()).decode()
 
 QUERY = """
@@ -78,10 +78,10 @@ def generate_svg(username, followers, repos, stars, commits, tux_base64, uptime_
           border: 1px solid #30363d;
           border-radius: 12px;
           padding: 0;
-          font-family: 'Fira Code', 'JetBrains Mono', 'Cascadia Code', monospace;
+          font-family: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', monospace;
           color: #e6edf3;
-          font-size: 13px;
-          line-height: 1.45;
+          font-size: 14px;
+          line-height: 1.40;
           box-shadow: 0 12px 32px rgba(0,0,0,0.6);
           overflow: hidden;
         }}
@@ -151,18 +151,18 @@ def generate_svg(username, followers, repos, stars, commits, tux_base64, uptime_
           color: #383e47;
         }}
         .label {{
-          color: #ff9e3b;
+          color: #ff9f43;
           font-weight: 500;
         }}
         .val {{
-          color: #61afef;
+          color: #61dafb;
         }}
         .val-highlight {{
-          color: #98c379;
+          color: #a8e063;
           font-weight: bold;
         }}
         .section-title {{
-          color: #abb2bf;
+          color: #b8c0cc;
           margin-top: 14px;
           margin-bottom: 4px;
           font-weight: 500;
