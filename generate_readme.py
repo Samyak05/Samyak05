@@ -1,25 +1,27 @@
-import os
-import requests
 import base64
-
+import os
 from datetime import datetime
 
+import requests
+
+
 def calculate_uptime(birth_date_str):
-    birth_date = datetime.strptime(birth_date_str, "%Y-%m-%d") # YYYY-MM-DD format
+    birth_date = datetime.strptime(birth_date_str, "%Y-%m-%d")
     now = datetime.now()
-    
+
     years = now.year - birth_date.year
     months = now.month - birth_date.month
     days = now.day - birth_date.day
-    
+
     if days < 0:
         months -= 1
         days += 30
     if months < 0:
         years -= 1
         months += 12
-        
+
     return f"{years} years, {months} months, {days} days"
+
 
 with open("tux-logo2.svg", "rb") as f:
     tux_base64 = base64.b64encode(f.read()).decode()
@@ -45,14 +47,15 @@ query($username: String!) {
 }
 """
 
+
 def fetch_stats(username, token):
     headers = {"Authorization": f"Bearer {token}"}
     response = requests.post(
         "https://api.github.com/graphql",
         json={"query": QUERY, "variables": {"username": username}},
-        headers=headers
+        headers=headers,
     )
-    
+
     if response.status_code != 200 or "errors" in response.json():
         print("API Error:", response.json())
         return 0, 0, 0, 0
@@ -62,14 +65,15 @@ def fetch_stats(username, token):
     repos = data["repositories"]["totalCount"]
     stars = sum(repo["stargazerCount"] for repo in data["repositories"]["nodes"])
     commits = sum(
-        repo["defaultBranchRef"]["target"]["history"]["totalCount"] 
-        for repo in data["repositories"]["nodes"] 
+        repo["defaultBranchRef"]["target"]["history"]["totalCount"]
+        for repo in data["repositories"]["nodes"]
         if repo["defaultBranchRef"]
     )
     return followers, repos, stars, commits
 
+
 def generate_svg(username, followers, repos, stars, commits, tux_base64, uptime_str):
-    svg_content = f'''<svg fill="none" width="850" height="790" xmlns="http://www.w3.org/2000/svg">
+    svg_content = f"""<svg fill="none" width="800" height="820" xmlns="http://www.w3.org/2000/svg">
   <foreignObject width="100%" height="100%">
     <div xmlns="http://www.w3.org/1999/xhtml">
       <style>
@@ -81,7 +85,7 @@ def generate_svg(username, followers, repos, stars, commits, tux_base64, uptime_
           font-family: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', monospace;
           color: #e6edf3;
           font-size: 14px;
-          line-height: 1.40;
+          line-height: 1.5;
           box-shadow: 0 12px 32px rgba(0,0,0,0.6);
           overflow: hidden;
         }}
@@ -147,26 +151,46 @@ def generate_svg(username, followers, repos, stars, commits, tux_base64, uptime_
           font-size: 12.5px;
           margin-bottom: 14px;
         }}
-        .dots-leader {{
-          color: #383e47;
+
+        /* Flexbox Leader Lines */
+        .row {{
+          display: flex;
+          align-items: baseline;
+        }}
+        .row::after {{
+          content: "";
+          flex-grow: 1;
+          order: 2;
+          margin: 0 8px;
+          border-bottom: 2px dotted #383e47;
+          position: relative;
+          top: -3px;
         }}
         .label {{
           color: #ff9f43;
           font-weight: 500;
+          order: 1;
+          white-space: nowrap;
         }}
         .val {{
           color: #61dafb;
+          order: 3;
+          white-space: nowrap;
         }}
         .val-highlight {{
           color: #a8e063;
           font-weight: bold;
+          order: 3;
+          white-space: nowrap;
         }}
+
         .section-title {{
           color: #b8c0cc;
           margin-top: 14px;
           margin-bottom: 4px;
           font-weight: 500;
         }}
+
         /* 2x2 Grid Layout for GitHub Stats */
         .stats-grid {{
           display: grid;
@@ -198,62 +222,65 @@ def generate_svg(username, followers, repos, stars, commits, tux_base64, uptime_
               <div class="subtitle-main">M.Tech Computer Science Student</div>
               <div class="subtitle-tags">Linux • Networking • Security</div>
 
-              <div><span class="label">OS: </span><span class="dots-leader">...............................</span> <span class="val">openSUSE Tumbleweed</span></div>
-              <div><span class="label">Uptime: </span><span class="dots-leader">...................</span> <span class="val">{uptime_str}</span></div>
-              <div><span class="label">Host: </span><span class="dots-leader">...................................</span> <span class="val">NIT Karnataka</span></div>
-              <div><span class="label">Kernel: </span><span class="dots-leader">...................................</span> <span class="val">Linux 7.1.4</span></div>
-              <div><span class="label">Shell: </span><span class="dots-leader">....................................</span> <span class="val">bash 5.3.15</span></div>
-              <div><span class="label">IDE: </span><span class="dots-leader">...................</span> <span class="val">IDEA 2026.2.0, VS Code 1.129.1</span></div>
+              <div class="row"><span class="label">OS:</span><span class="val">openSUSE Tumbleweed</span></div>
+              <div class="row"><span class="label">Uptime:</span><span class="val">{uptime_str}</span></div>
+              <div class="row"><span class="label">Host:</span><span class="val">NIT Karnataka</span></div>
+              <div class="row"><span class="label">Kernel:</span><span class="val">Linux 7.1.4</span></div>
+              <div class="row"><span class="label">Shell:</span><span class="val">bash 5.3.15</span></div>
+              <div class="row"><span class="label">IDE:</span><span class="val">IDEA 2026.2.0, VS Code 1.129.1</span></div>
             </div>
           </div>
 
           <!-- Bottom Full-Width Sections -->
           <div class="section-title">- Languages -----------------------------------------------------------------------------</div>
-          <div><span class="label">Languages.Programming</span><span class="dots-leader">................</span> <span class="val">Java, C++, C, Python</span></div>
-          <div><span class="label">Languages.Scripting</span><span class="dots-leader">..................</span> <span class="val">Bash</span></div>
-          <div><span class="label">Languages.Markup</span><span class="dots-leader">.....................</span> <span class="val">LaTeX, Markdown</span></div>
+          <div class="row"><span class="label">Languages.Programming</span><span class="val">Java, C++, C, Python</span></div>
+          <div class="row"><span class="label">Languages.Scripting</span><span class="val">Bash</span></div>
+          <div class="row"><span class="label">Languages.Markup</span><span class="val">LaTeX, Markdown</span></div>
 
           <div class="section-title">- Tools &amp; Frameworks --------------------------------------------------------------------</div>
-          <div><span class="label">Tools.Dev</span><span class="dots-leader">............................</span> <span class="val">Git, GitHub, GitLab, Docker</span></div>
-          <div><span class="label">Tools.Networking</span><span class="dots-leader">.....................</span> <span class="val">OpenSSL, NetBird, tcpdump, Wireshark</span></div>
-          <div><span class="label">Tools.Linux</span><span class="dots-leader">..........................</span> <span class="val">Network Namespaces, iproute2, systemd</span></div>
+          <div class="row"><span class="label">Tools.Dev</span><span class="val">Git, GitHub, GitLab, Docker</span></div>
+          <div class="row"><span class="label">Tools.Networking</span><span class="val">OpenSSL, NetBird, tcpdump, Wireshark</span></div>
+          <div class="row"><span class="label">Tools.Linux</span><span class="val">Network Namespaces, iproute2, systemd</span></div>
 
           <div class="section-title">- Projects ------------------------------------------------------------------------------</div>
-          <div><span class="label">Projects.Current</span><span class="dots-leader">.....................</span> <span class="val">Securing Ethernet Switches</span></div>
-          <div><span class="label">Projects.OpenSource</span><span class="dots-leader">..................</span> <span class="val">NeST - Mutual TLS Support</span></div>
-          <div><span class="label">Projects.Networking</span><span class="dots-leader">..................</span> <span class="val">TLS Handshake (Linux NetNS)</span></div>
-          <div><span class="label">Projects.Security</span><span class="dots-leader">....................</span> <span class="val">IEC 62443 Threat Modeling</span></div>
+          <div class="row"><span class="label">Projects.Current</span><span class="val">Securing Ethernet Switches</span></div>
+          <div class="row"><span class="label">Projects.OpenSource</span><span class="val">NeST - Mutual TLS Support</span></div>
+          <div class="row"><span class="label">Projects.Networking</span><span class="val">TLS Handshake (Linux NetNS)</span></div>
+          <div class="row"><span class="label">Projects.Security</span><span class="val">IEC 62443 Threat Modeling</span></div>
 
           <div class="section-title">- Contact -------------------------------------------------------------------------------</div>
-          <div><span class="label">Contact.Email</span><span class="dots-leader">........................</span> <span class="val">samyakgedam03@gmail.com</span></div>
-          <div><span class="label">Contact.LinkedIn</span><span class="dots-leader">.....................</span> <span class="val">linkedin.com/in/samyak-gedam/</span></div>
-          <div><span class="label">Contact.GitHub</span><span class="dots-leader">.......................</span> <span class="val">github.com/Samyak05</span></div>
+          <div class="row"><span class="label">Contact.Email</span><span class="val">samyakgedam03@gmail.com</span></div>
+          <div class="row"><span class="label">Contact.LinkedIn</span><span class="val">linkedin.com/in/samyak-gedam/</span></div>
+          <div class="row"><span class="label">Contact.GitHub</span><span class="val">github.com/Samyak05</span></div>
 
           <div class="section-title">- GitHub Stats --------------------------------------------------------------------------</div>
           <div class="stats-grid">
-            <div><span class="label">GitHub.Repositories</span><span class="dots-leader">..........</span> <span class="val-highlight">{repos}</span></div>
-            <div><span class="label">GitHub.Stars</span><span class="dots-leader">.................</span> <span class="val-highlight">{stars}</span></div>
-            <div><span class="label">GitHub.Commits</span><span class="dots-leader">...............</span> <span class="val-highlight">{commits}</span></div>
-            <div><span class="label">GitHub.Followers</span><span class="dots-leader">.............</span> <span class="val-highlight">{followers}</span></div>
+            <div class="row"><span class="label">GitHub.Repositories</span><span class="val-highlight">{repos}</span></div>
+            <div class="row"><span class="label">GitHub.Stars</span><span class="val-highlight">{stars}</span></div>
+            <div class="row"><span class="label">GitHub.Commits</span><span class="val-highlight">{commits}</span></div>
+            <div class="row"><span class="label">GitHub.Followers</span><span class="val-highlight">{followers}</span></div>
           </div>
         </div>
       </div>
     </div>
   </foreignObject>
 </svg>
-'''
+"""
     with open("github-profile.svg", "w") as f:
         f.write(svg_content)
     print("Successfully generated github-profile.svg")
 
+
 if __name__ == "__main__":
     token = os.getenv("GH_TOKEN")
     username = os.getenv("GH_USERNAME", "Samyak05")
-    
-    uptime_str = calculate_uptime("2003-03-11") # Calculate age / uptime
-    
+
+    uptime_str = calculate_uptime("2003-03-11")
+
     if not token:
         print("Error: GH_TOKEN environment variable is missing.")
     else:
         followers, repos, stars, commits = fetch_stats(username, token)
-        generate_svg(username, followers, repos, stars, commits, tux_base64, uptime_str)
+        generate_svg(
+            username, followers, repos, stars, commits, tux_base64, uptime_str
+        )
