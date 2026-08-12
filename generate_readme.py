@@ -73,7 +73,7 @@ def fetch_stats(username, token):
 
 
 def generate_svg(username, followers, repos, stars, commits, tux_base64, uptime_str):
-    svg_content = f"""<svg fill="none" width="800" height="820" xmlns="http://www.w3.org/2000/svg">
+    svg_content = f"""<svg fill="none" width="680" height="800" xmlns="http://www.w3.org/2000/svg">
   <foreignObject width="100%" height="100%">
     <div xmlns="http://www.w3.org/1999/xhtml">
       <style>
@@ -84,7 +84,7 @@ def generate_svg(username, followers, repos, stars, commits, tux_base64, uptime_
           padding: 0;
           font-family: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', monospace;
           color: #e6edf3;
-          font-size: 14px;
+          font-size: 13px;
           line-height: 1.5;
           box-shadow: 0 12px 32px rgba(0,0,0,0.6);
           overflow: hidden;
@@ -125,14 +125,14 @@ def generate_svg(username, followers, repos, stars, commits, tux_base64, uptime_
           padding-bottom: 16px;
         }}
         .ascii-col {{
-          width: 240px;
+          width: 200px;
           display: flex;
           justify-content: center;
           align-items: center;
         }}
         .info-col {{
           flex-grow: 1;
-          padding-left: 20px;
+          padding-left: 16px;
         }}
         .user-title {{
           color: #ffffff;
@@ -189,13 +189,15 @@ def generate_svg(username, followers, repos, stars, commits, tux_base64, uptime_
           margin-top: 14px;
           margin-bottom: 4px;
           font-weight: 500;
+          white-space: nowrap;
+          overflow: hidden;
         }}
 
         /* 2x2 Grid Layout for GitHub Stats */
         .stats-grid {{
           display: grid;
           grid-template-columns: 1fr 1fr;
-          gap: 4px 24px;
+          gap: 4px 20px;
         }}
       </style>
 
@@ -214,7 +216,7 @@ def generate_svg(username, followers, repos, stars, commits, tux_base64, uptime_
             <div class="ascii-col">
               <img
                   src="data:image/svg+xml;base64,{tux_base64}"
-                  style="width:185px;height:185px;object-fit:contain;"
+                  style="width:165px;height:165px;object-fit:contain;"
               />
             </div>
             <div class="info-col">
@@ -227,33 +229,33 @@ def generate_svg(username, followers, repos, stars, commits, tux_base64, uptime_
               <div class="row"><span class="label">Host:</span><span class="val">NIT Karnataka</span></div>
               <div class="row"><span class="label">Kernel:</span><span class="val">Linux 7.1.4</span></div>
               <div class="row"><span class="label">Shell:</span><span class="val">bash 5.3.15</span></div>
-              <div class="row"><span class="label">IDE:</span><span class="val">IDEA 2026.2.0, VS Code 1.129.1</span></div>
+              <div class="row"><span class="label">IDE:</span><span class="val">IDEA, VS Code</span></div>
             </div>
           </div>
 
           <!-- Bottom Full-Width Sections -->
-          <div class="section-title">- Languages -----------------------------------------------------------------------------</div>
+          <div class="section-title">- Languages -------------------------------------------------------------------</div>
           <div class="row"><span class="label">Languages.Programming</span><span class="val">Java, C++, C, Python</span></div>
           <div class="row"><span class="label">Languages.Scripting</span><span class="val">Bash</span></div>
           <div class="row"><span class="label">Languages.Markup</span><span class="val">LaTeX, Markdown</span></div>
 
-          <div class="section-title">- Tools &amp; Frameworks --------------------------------------------------------------------</div>
+          <div class="section-title">- Tools &amp; Frameworks ----------------------------------------------------------</div>
           <div class="row"><span class="label">Tools.Dev</span><span class="val">Git, GitHub, GitLab, Docker</span></div>
           <div class="row"><span class="label">Tools.Networking</span><span class="val">OpenSSL, NetBird, tcpdump, Wireshark</span></div>
           <div class="row"><span class="label">Tools.Linux</span><span class="val">Network Namespaces, iproute2, systemd</span></div>
 
-          <div class="section-title">- Projects ------------------------------------------------------------------------------</div>
+          <div class="section-title">- Projects --------------------------------------------------------------------</div>
           <div class="row"><span class="label">Projects.Current</span><span class="val">Securing Ethernet Switches</span></div>
           <div class="row"><span class="label">Projects.OpenSource</span><span class="val">NeST - Mutual TLS Support</span></div>
           <div class="row"><span class="label">Projects.Networking</span><span class="val">TLS Handshake (Linux NetNS)</span></div>
           <div class="row"><span class="label">Projects.Security</span><span class="val">IEC 62443 Threat Modeling</span></div>
 
-          <div class="section-title">- Contact -------------------------------------------------------------------------------</div>
+          <div class="section-title">- Contact ---------------------------------------------------------------------</div>
           <div class="row"><span class="label">Contact.Email</span><span class="val">samyakgedam03@gmail.com</span></div>
           <div class="row"><span class="label">Contact.LinkedIn</span><span class="val">linkedin.com/in/samyak-gedam/</span></div>
           <div class="row"><span class="label">Contact.GitHub</span><span class="val">github.com/Samyak05</span></div>
 
-          <div class="section-title">- GitHub Stats --------------------------------------------------------------------------</div>
+          <div class="section-title">- GitHub Stats ----------------------------------------------------------------</div>
           <div class="stats-grid">
             <div class="row"><span class="label">GitHub.Repositories</span><span class="val-highlight">{repos}</span></div>
             <div class="row"><span class="label">GitHub.Stars</span><span class="val-highlight">{stars}</span></div>
