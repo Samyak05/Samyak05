@@ -229,7 +229,7 @@ def generate_svg(username, followers, repos, stars, commits, tux_base64, uptime_
               <div class="row"><span class="label">Host:</span><span class="val">NIT Karnataka</span></div>
               <div class="row"><span class="label">Kernel:</span><span class="val">Linux 7.1.4</span></div>
               <div class="row"><span class="label">Shell:</span><span class="val">bash 5.3.15</span></div>
-              <div class="row"><span class="label">IDE:</span><span class="val">IDEA, VS Code</span></div>
+              <div class="row"><span class="label">IDE:</span><span class="val">IDEA 2026.2.1, VSCode 1.133.0</span></div>
             </div>
           </div>
 

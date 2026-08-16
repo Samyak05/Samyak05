@@ -154,7 +154,7 @@
               <div class="row"><span class="label">Host:</span><span class="val">NIT Karnataka</span></div>
               <div class="row"><span class="label">Kernel:</span><span class="val">Linux 7.1.4</span></div>
               <div class="row"><span class="label">Shell:</span><span class="val">bash 5.3.15</span></div>
-              <div class="row"><span class="label">IDE:</span><span class="val">IDEA, VS Code</span></div>
+              <div class="row"><span class="label">IDE:</span><span class="val">IDEA 2026.2.1, VSCode 1.133.0</span></div>
             </div>
           </div>
 
@@ -184,7 +184,7 @@
           <div class="stats-grid">
             <div class="row"><span class="label">GitHub.Repositories</span><span class="val-highlight">18</span></div>
             <div class="row"><span class="label">GitHub.Stars</span><span class="val-highlight">4</span></div>
-            <div class="row"><span class="label">GitHub.Commits</span><span class="val-highlight">15081</span></div>
+            <div class="row"><span class="label">GitHub.Commits</span><span class="val-highlight">15084</span></div>
             <div class="row"><span class="label">GitHub.Followers</span><span class="val-highlight">5</span></div>
           </div>
         </div>
