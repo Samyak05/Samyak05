@@ -56,19 +56,23 @@ def fetch_stats(username, token):
         headers=headers,
     )
 
-    if response.status_code != 200 or "errors" in response.json():
-        print("API Error:", response.json())
+    res_json = response.json()
+    if response.status_code != 200 or "errors" in res_json:
+        print("API Error:", res_json)
         return 0, 0, 0, 0
 
-    data = response.json()["data"]["user"]
+    data = res_json["data"]["user"]
     followers = data["followers"]["totalCount"]
     repos = data["repositories"]["totalCount"]
     stars = sum(repo["stargazerCount"] for repo in data["repositories"]["nodes"])
-    commits = sum(
-        repo["defaultBranchRef"]["target"]["history"]["totalCount"]
-        for repo in data["repositories"]["nodes"]
-        if repo["defaultBranchRef"]
-    )
+
+    # Safely iterate through repositories and extract commit history
+    commits = 0
+    for repo in data["repositories"]["nodes"]:
+        ref = repo.get("defaultBranchRef")
+        if ref and ref.get("target") and "history" in ref["target"]:
+            commits += ref["target"]["history"]["totalCount"]
+
     return followers, repos, stars, commits
 
 
